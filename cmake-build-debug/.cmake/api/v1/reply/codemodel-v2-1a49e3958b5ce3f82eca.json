@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "LinkedList210::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-LinkedList210-Debug-33ec6678b3826aee55d0.json",
+					"jsonFile" : "target-LinkedList210-Debug-e3ebe4f58372fc4deb93.json",
 					"name" : "LinkedList210",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/manjumuralidharan/CLionProjects/LinkedList210/cmake-build-debug",
-		"source" : "/Users/manjumuralidharan/CLionProjects/LinkedList210"
+		"build" : "/Users/jaeyoonlee/CLionProjects/2-13-jlee6128/cmake-build-debug",
+		"source" : "/Users/jaeyoonlee/CLionProjects/2-13-jlee6128"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 4
+		"minor" : 7
 	}
 }
