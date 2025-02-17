@@ -66,10 +66,11 @@ public:
         length--;
     }
     Node<T> *get(int index) {
-        if (index < 0 || index >= length)
-            return nullptr;
+        if (index<0 || index>=length) {
+            return NULL;
+        }
         Node<T> *temp = head;
-        for (int i = 0; i < index; ++i) {
+        for (int i = 0; i < index; i++) {
             temp = temp->next;
         }
         return temp;
@@ -77,31 +78,38 @@ public:
 
     void deleteNode(int index) {
         //TODO:Write the function to delete at the given index. Reuse the pre-written functions for edge cases. Account for missing index.
-        if (index <0 || index>=length)
+        if (index<0 || index>=length) {
             return;
-        if (index == 0)
+        }
+        if (index==0) {
             return delfirst();
-        if (index == length - 1)
-            return dellast();
-        Node<T> *prev = get(index - 1);
-        Node<T> *temp = prev->next;
 
+        }
+        if (index==length-1) {
+            return dellast();
+
+
+        }
+        Node<T> *prev = get(index-1);
+        Node<T> *temp = prev->next;
         prev->next = temp->next;
         delete temp;
         length--;
-
     }
+
 
    void insert(int index, T *value) {
         //TODO:Write a function to insert a new node at a give index. Reuse the pre-written functions for edge cases. Account for missing index
-
     }
 
    void reverselist(){
         //TODO:Write a function to reverse the list using the logic from the slide.
-        Node<T> *prev = NULL;
-        Node<T> *curr = head;
-        Node<T> *next = NULL;
+        if (head == NULL || head->next == NULL) {
+            return;
+        }
+        Node<T> * prev = NULL;
+        Node<T> * curr = head;
+        Node<T> * next = NULL;
 
         while (curr != NULL) {
             next = curr->next;
@@ -109,10 +117,8 @@ public:
             prev = curr;
             curr = next;
         }
-
         head = prev;
     }
-
 
     void print() {
         cout << "Printing List.." << endl;
@@ -128,13 +134,18 @@ int main() {
     student *s1 = new student("A", 20);
     student *s2 = new student("B", 21);
     student *s3 = new student("C", 22);
+    student *s4 = new student("D", 23);
+    student *s5 = new student("E", 24);
     LinkedList<student> *ll = new LinkedList<student>(s1);
     ll->add(s2);
     ll->addhead(s3);
+    ll->add(s1);
+    ll->add(s4);
+    ll->addhead(s5);
     ll->print();
     ll->delfirst();
     ll->print();
     ll->dellast();
     ll->print();
-    ll->reverselist();
+
 }
